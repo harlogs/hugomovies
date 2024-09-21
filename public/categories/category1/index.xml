@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Category1 on Home</title>
-    <link>http://localhost:1313/categories/category1/</link>
+    <link>http://localhost:1313/hugomovies/categories/category1/</link>
     <description>Recent content in Category1 on Home</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Aug 2024 13:25:56 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/category1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/hugomovies/categories/category1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Article Title</title>
-      <link>http://localhost:1313/posts/veges-ahead/</link>
+      <link>http://localhost:1313/hugomovies/posts/veges-ahead/</link>
       <pubDate>Sat, 24 Aug 2024 13:25:56 +0530</pubDate>
-      <guid>http://localhost:1313/posts/veges-ahead/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;</description>
+      <guid>http://localhost:1313/hugomovies/posts/veges-ahead/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Maharaja Movie</title>
-      <link>http://localhost:1313/posts/latest-news/</link>
+      <link>http://localhost:1313/hugomovies/posts/latest-news/</link>
       <pubDate>Sat, 24 Aug 2024 13:25:56 +0530</pubDate>
-      <guid>http://localhost:1313/posts/latest-news/</guid>
+      <guid>http://localhost:1313/hugomovies/posts/latest-news/</guid>
       <description>&lt;!-- raw HTML omitted --&gt;</description>
     </item>
   </channel>

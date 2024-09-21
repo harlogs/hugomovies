@@ -3,29 +3,26 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/hugomovies/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hugomovies/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Me | Home</title>
 
     
 
-<link rel="canonical" href="http://localhost:1313/about/me/" />
-
-
-  <meta itemprop="name" content="Me">
-  <meta itemprop="description" content="Cut out summary from your post content here.">
-  <meta itemprop="datePublished" content="2024-08-24T13:25:26+05:30">
-  <meta itemprop="dateModified" content="2024-08-24T13:25:26+05:30">
-  <meta itemprop="wordCount" content="14">
+<link rel="canonical" href="http://localhost:1313/hugomovies/about/me/" />
 
 
 
 <meta name="author" content="" />
+<meta name="description" content="" />
 
 
 
-<meta property="og:url" content="http://localhost:1313/about/me/">
+<meta name="generator" content="Hugo 0.127.0">
+
+
+<meta property="og:url" content="http://localhost:1313/hugomovies/about/me/">
   <meta property="og:site_name" content="Home">
   <meta property="og:title" content="Me">
   <meta property="og:description" content="Cut out summary from your post content here.">
@@ -44,9 +41,8 @@
 
 
 
-<meta name="generator" content="Hugo 0.127.0">
 
-<link rel="stylesheet" href="/css/output.css" />
+<link rel="stylesheet" href="/hugomovies/css/output.css" />
 
 
 
@@ -60,6 +56,9 @@
     overflow: auto;
   }
 </style>
+
+
+
 
 
 
@@ -84,10 +83,9 @@
   <div class="container flex justify-between px-4">
   
     <section class="flex items-center gap-4">
-     
-      <div class="cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
-        <div class="h-100 rounded-full">
-          <img src="/images/logo.png" alt="" />
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/hugomovies/images/logo.png" alt="" />
         </div>
       </div>
 
@@ -123,7 +121,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/hugomovies/posts" title="Archives">
     <ion-icon name="archive"></ion-icon>
     Archives
   </a>
@@ -133,7 +131,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/hugomovies/categories" title="All Categories">
     <ion-icon name="grid"></ion-icon>
     All Categories
   </a>
@@ -143,7 +141,7 @@
 
 
 <li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/hugomovies/tags" title="All Tags">
     <ion-icon name="pricetags"></ion-icon>
     All Tags
   </a>
@@ -183,21 +181,21 @@
 
       
       
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/hugomovies/posts" title="Archives">
   <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
 </a>
 
 
       
       
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/hugomovies/categories" title="All Categories">
   <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
 </a>
 
 
       
       
-<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/hugomovies/tags" title="All Tags">
   <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
 </a>
 
@@ -221,55 +219,25 @@
   <aside class="w-1/4 p-4">
     
     <div class="widget bg-gray-200 p-4 rounded">
-      
-      <ul>
-        
-        
-      
-        
-      
-        
-      
-        
-          <li>
-            <a href="http://localhost:1313/">Home</a>
-          </li>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-          <li>
-            <a href="http://localhost:1313/about/">Abouts</a>
-          </li>
-        
-      
-        
-          <li>
-            <a href="http://localhost:1313/about/me/">Me</a>
-          </li>
-        
-      
-      </ul>
+      <h3 class="font-bold">Left Sidebar</h3>
+      <p>Your widget content here.</p>
     </div>
   </aside>
-
-  <main class="flex-grow p-4">
+<main class="mt-4 px-4">
   
   <div>
   
     
-    <article class="mx-auto prose dark:prose-invert" id="dream-single-post-main">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Me">
+  <meta itemprop="description" content="Cut out summary from your post content here.">
+  <meta itemprop="datePublished" content="2024-08-24T13:25:26+05:30">
+  <meta itemprop="dateModified" content="2024-08-24T13:25:26+05:30">
+  <meta itemprop="wordCount" content="14">
+
       <header>
-        <h1>Me</h1>
+        <h1 itemprop="headline">Me</h1>
         <p class="text-sm">
           
             Saturday, Aug 24, 2024
@@ -278,7 +246,7 @@
           | <span>1 minute read</span>
 
           
-          | <span>Update at
+          | <span>Updated at
             
               Saturday, Aug 24, 2024
             </span>
@@ -290,22 +258,45 @@
   <span>@</span>
   
 
-  <span>
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
   
-    
+    <span itemprop="name"></span>
   
   </span>
 </div>
 
 
-          <span class="flex items-center gap-2">
-  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=Me&url=http%3a%2f%2flocalhost%3a1313%2fabout%2fme%2f" title="Share on X">
-    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
-  </a>
-  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fabout%2fme%2f" title="Share on Facebook">
-    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
-  </a>
-</span>
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Me&amp;url=http://localhost:1313/hugomovies/about/me/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/hugomovies/about/me/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Me%20http://localhost:1313/hugomovies/about/me/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
 
         </div>
       </header>
@@ -320,16 +311,7 @@
   </div>
 
   
-
-  <section class="max-w-[65ch] mx-auto space-y-4">
-    
-
-    
-
-    
-  </section>
 </main>
-
 <aside class="w-1/4 p-4">
   
   <div class="widget bg-gray-200 p-4 rounded">
@@ -352,7 +334,8 @@
   <p class="text-sm">
     🌱
     <span class="text-base-content/60">
-      Powered by <a class="hover:underline" href="https://technologymanias.com/" target="_blank">Technology Manias</a>.</span
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
     >
   </p>
   
@@ -364,7 +347,7 @@
     { name: 'sunny', status: 'n' },
     { name: 'desktop', status: 'auto' }
   ] }"
-  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
 >
   <template x-for="icon in icons">
     <div
@@ -413,11 +396,18 @@
   window.darkTheme = "forest"
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-<script src="/js/grid.js"></script>
 
-<script src="/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+  <script src="/hugomovies/js/grid.js"></script>
+
+
+
+
+<script src="/hugomovies/js/main.js"></script>
 
     
 
@@ -426,6 +416,8 @@
 
 
 
+
+    
 
     
 
