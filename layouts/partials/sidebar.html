@@ -1,0 +1,15 @@
+<div id="sidebar">
+    <h3>Categories</h3>
+    <ul>
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <li><a href="{{ "/categories/" | relURL }}{{ $name | urlize }}">{{ $name }}</a></li>
+        {{ end }}
+    </ul>
+
+    <h3>Recent Posts</h3>
+    <ul>
+        {{ range first 5 .Site.RegularPages }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</div>
