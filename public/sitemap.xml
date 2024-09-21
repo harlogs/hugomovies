@@ -31,8 +31,5 @@
   </url><url>
     <loc>http://localhost:1313/hugomovies/about/</loc>
     <lastmod>2024-08-24T13:25:26+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/hugomovies/about/me/</loc>
-    <lastmod>2024-08-24T13:25:26+05:30</lastmod>
   </url>
 </urlset>
