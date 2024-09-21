@@ -18,4 +18,4 @@ Cut out summary from your post content here.
 ![Main Image](/assets/images/default1.jpg "Main Image Title")
 The remaining content of your post......
 
-{{< playbook "https://www.playbook.com/s/nikhatraste/BqHrnCwX5wWtftsun2TsTamN?assetToken=UxhJ3mFkmZGwsPd9TapV7fk9" >}}
+{{< playbook "https://www.playbook.com/s/nikhatraste/th6KrtZZp2vaCWj4csdbXt4i?assetToken=Y12QGWu5iaDiacfRvfZsifdA" >}}
