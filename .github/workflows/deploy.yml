@@ -9,15 +9,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # Setup Node.js version 20.x
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-      - name: Checkout source
-        uses: actions/checkout@v3
-        with:
-          submodules: true
 
+      # Checkout source with submodules
+      # - name: Checkout source
+      #   uses: actions/checkout@v3
+      #   with:
+      #     submodules: true
+
+      # Checkout destination (gh-pages branch)
       - name: Checkout destination
         uses: actions/checkout@v3
         if: github.ref == 'refs/heads/main'
@@ -25,13 +29,17 @@ jobs:
           ref: gh-pages
           path: built-site
 
+      # Setup Hugo
       - name: Setup Hugo
         run: |
           curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.110.0/hugo_extended_0.110.0_linux-amd64.tar.gz'
-          tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo          
+          tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo
+
+      # Build site using Hugo
       - name: Build
         run: ${RUNNER_TEMP}/hugo
 
+      # Deploy to gh-pages
       - name: Deploy
         if: github.ref == 'refs/heads/main'
         run: |
@@ -40,5 +48,5 @@ jobs:
           git add .
           git config user.name 'harlogs'
           git config user.email 'stepnest02@gmail.com'
-          git commit -m 'Updated sites o'
-          git push          
+          git commit -m 'Updated site'
+          git push
