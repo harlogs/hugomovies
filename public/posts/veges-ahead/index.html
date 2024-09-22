@@ -318,52 +318,61 @@
 <p><img src="/assets/images/default1.jpg" alt="Main Image" title="Main Image Title">
 The remaining content of your post&hellip;&hellip;</p>
 <script>
-    async function fetchData(url) {
-        try {
-            const urlParams = new URL(url);
-            const searchParams = new URLSearchParams(urlParams.search);
-            const assetToken = searchParams.get('assetToken');
-            const pathname = urlParams.pathname.split('/');
-            const userName = pathname[2];
-            console.log(userName);
+  async function fetchData(url) {
+    try {
+        const urlParams = new URL(url);
+        const searchParams = new URLSearchParams(urlParams.search);
+        const assetToken = searchParams.get('assetToken');
+        const pathname = urlParams.pathname.split('/');
+        const userName = pathname[2];
 
-            const response = await fetch(`https://be.playbook.com/graphql?${new URLSearchParams({
-                operationName: 'AssetSignedDownloadUrlQuery',
-                variables: JSON.stringify({
-                    assetToken: assetToken
-                }),
-                extensions: '{"operationId":"graphql-frontend-prod/61cfc4ae0c63221cc1d5ca47f13250c5"}'
-            })}`, {
-                method: 'GET',
-                headers: {
-                    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MjU1MDU2MiwicGFzc3dvcmQiOiIkMmEkMTAkLldSQ2FJYnUwRDFNWUtzY3J0ZjBILlJYRW5jbEx5TElmekVPTUIuL2RQc2FxVDNEbWJ3TE8iLCJleHAiOjE3MjkzMjA1NTQsImp0aSI6IjA4MWZiZTQwLWQyOTAtNGE0MS1iYmMzLWMxNGQ5YTdmOTIyMyJ9.e5-4gOpHFDl6VpZmK0XhoYesU4AVRLLJPY7V0hBb-8I',
-                    'Content-Type': 'application/json',
-                    'organization': userName
-                }
-            });
-            if (!response.ok) {
+        console.log("Username:", userName);
+        console.log("Asset Token:", assetToken);
+
+        // Build the GraphQL query parameters
+        const graphqlParams = new URLSearchParams({
+            operationName: 'AssetSignedDownloadUrlQuery',
+            variables: JSON.stringify({
+                assetToken: assetToken
+            }),
+            extensions: '{"operationId":"graphql-frontend-prod/61cfc4ae0c63221cc1d5ca47f13250c5"}'
+        });
+
+        const response = await fetch(`https://be.playbook.com/graphql?${graphqlParams}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MjU1MDU2MiwicGFzc3dvcmQiOiIkMmEkMTAkLldSQ2FJYnUwRDFNWUtzY3J0ZjBILlJYRW5jbEx5TElmekVPTUIuL2RQc2FxVDNEbWJ3TE8iLCJleHAiOjE3MjkzMjA1NTQsImp0aSI6IjA4MWZiZTQwLWQyOTAtNGE0MS1iYmMzLWMxNGQ5YTdmOTIyMyJ9.e5-4gOpHFDl6VpZmK0XhoYesU4AVRLLJPY7V0hBb-8I',
+                'Content-Type': 'application/json',
+                'organization': userName
+            }
+        });
+
+        // Check if the response is ok
+        if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}`);
         }
 
         const data = await response.json();
-            const signedDownloadUrl = data?.data?.asset?.signedDownloadUrl;
-            console.log(signedDownloadUrl);
-            const videoElement = document.getElementById('dynamic-video');
-            videoElement.src = signedDownloadUrl;
-        } catch (error) {
-            if (error.response) {
-                console.log('Error Response:', error.response.status, error.response.statusText);
-                console.log('Error Data:', error.response.data.toString());
-            } else {
-                console.log('Error Message :', error.message);
-            }
+        const signedDownloadUrl = data?.data?.asset?.signedDownloadUrl;
+        console.log("Signed Download URL:", signedDownloadUrl);
+
+        // Update video element with the download URL
+        const videoElement = document.getElementById('dynamic-video');
+        videoElement.src = signedDownloadUrl;
+    } catch (error) {
+        if (error.response) {
+            console.log('Error Response:', error.response.status, error.response.statusText);
+            console.log('Error Data:', error.response.data.toString());
+        } else {
+            console.log('Error Message:', error.message);
         }
     }
+}
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const assetUrl = document.getElementById('asset-url-hidden').value;
-        fetchData(assetUrl);
-    });
+document.addEventListener("DOMContentLoaded", function() {
+    const assetUrl = document.getElementById('asset-url-hidden').value;
+    fetchData(assetUrl);
+});
 </script>
 
 <input type="hidden" id="asset-url-hidden" value="https://www.playbook.com/s/nikhatraste/th6KrtZZp2vaCWj4csdbXt4i?assetToken=Y12QGWu5iaDiacfRvfZsifdA"  />
