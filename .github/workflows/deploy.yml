@@ -1,52 +1,32 @@
-name: Publish to GH Pages
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - main
-  pull_request:
+      - main  # Deploy when the main branch is pushed to
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      # Setup Node.js version 20.x
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
+      # Checkout the code from the repository
+      - name: Checkout the repository
+        uses: actions/checkout@v3
 
-      # Checkout source with submodules
-      # - name: Checkout source
-      #   uses: actions/checkout@v3
-      #   with:
-      #     submodules: true
-
-      # Checkout destination (gh-pages branch)
-      - name: Checkout destination
-        uses: actions/checkout@v4
-        if: github.ref == 'refs/heads/main'
-        with:
-          ref: gh-pages
-          path: built-site
-
-      # Setup Hugo
+      # Set up Hugo
       - name: Setup Hugo
-        run: |
-          curl -L -o /tmp/hugo.tar.gz 'https://github.com/gohugoio/hugo/releases/download/v0.110.0/hugo_extended_0.110.0_linux-amd64.tar.gz'
-          tar -C ${RUNNER_TEMP} -zxvf /tmp/hugo.tar.gz hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.110.0'  # You can specify any version
 
-      # Build site using Hugo
-      - name: Build
-        run: ${RUNNER_TEMP}/hugo
+      # Build the Hugo site
+      - name: Build the site
+        run: hugo --minify
 
-      # Deploy to gh-pages
-      - name: Deploy
-        if: github.ref == 'refs/heads/main'
-        run: |
-          cp -R public/* ${GITHUB_WORKSPACE}/built-site/
-          cd ${GITHUB_WORKSPACE}/built-site
-          git add .
-          git config user.name 'harlogs'
-          git config user.email 'stepnest02@gmail.com'
-          git commit -m 'Updated site'
-          git push
+      # Deploy the Hugo site to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
