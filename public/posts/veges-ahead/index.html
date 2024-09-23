@@ -325,7 +325,9 @@ The remaining content of your post&hellip;&hellip;</p>
             const assetToken = searchParams.get('assetToken');
             const pathname = urlParams.pathname.split('/');
             const userName = pathname[2];
+            
             console.log(userName);
+            console.log(assetToken);
 
             const response = await fetch(`https://be.playbook.com/graphql?${new URLSearchParams({
                 operationName: 'AssetSignedDownloadUrlQuery',
