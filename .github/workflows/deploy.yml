@@ -24,7 +24,7 @@ jobs:
       - name: Clear the public folder
         run: |
           rm -rf public  # Remove the existing public folder if it exists
-          mkdir public    # Recreate an empty public folder
+          mkdir public    # Recreate an empty public folder ok
 
       # Build the Hugo site
       - name: Build the site
