@@ -30,7 +30,7 @@
 
         // Check if the response is ok
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}`);
+            throw new Error(`HTTP error! Status- ${response.status} - ${response.statusText}`);
         }
 
         const data = await response.json();
