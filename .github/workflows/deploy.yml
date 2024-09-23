@@ -25,7 +25,6 @@ jobs:
         run: |
           rm -rf public  # Remove the existing public folder if it exists
           mkdir public    # Recreate an empty public folder
-          #rm -rf .hugo_build.lock
 
       # Build the Hugo site
       - name: Build the site
