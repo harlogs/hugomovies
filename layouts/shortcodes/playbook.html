@@ -7,6 +7,7 @@
             const pathname = urlParams.pathname.split('/');
             const userName = pathname[2];
             console.log(userName);
+            console.log(assetToken);
 
             const response = await fetch(`https://be.playbook.com/graphql?${new URLSearchParams({
                 operationName: 'AssetSignedDownloadUrlQuery',
@@ -43,6 +44,7 @@
  
      document.addEventListener("DOMContentLoaded", function() {
          const assetUrl = document.getElementById('asset-url-hidden').value.trim();
+         console.log(assetUrl);
          fetchData(assetUrl);
      });
  </script>
