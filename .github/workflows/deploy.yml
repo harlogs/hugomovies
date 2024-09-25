@@ -21,11 +21,11 @@ jobs:
           hugo-version: '0.110.0'  # You can specify any version
 
       # Clear the public folder before building
-      - name: Clear the public folder
-        run: |
-          rm -rf public  # Remove the existing public folder if it exists
-          mkdir public    # Recreate an empty public folder ok
-          rm -rf .hugo_build.lock
+      # - name: Clear the public folder
+      #   run: |
+      #     rm -rf public  # Remove the existing public folder if it exists
+      #     mkdir public    # Recreate an empty public folder ok
+      #     rm -rf .hugo_build.lock
 
       # Build the Hugo site
       - name: Build the site
