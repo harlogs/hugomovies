@@ -4,3 +4,5 @@ title = 'Home'
 theme = 'dream'
 [params.advanced]
     customCSS = ["css/custom.css"]
+relativeURLs = false
+canonifyURLs = false
