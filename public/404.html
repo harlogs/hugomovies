@@ -45,11 +45,13 @@
      
 
     
+    <link rel="stylesheet" href="/hugomovies/css/custom.css" />
+    
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  </head>
 
-  <body x-data="{
+
+    <body x-data="{
     flip: false,
   }">
     
@@ -62,11 +64,10 @@
   <div class="container flex justify-between px-4">
   
     <section class="flex items-center gap-4">
-      <div class="cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
-        <div class="h-100 rounded-full">
-          <img src="/hugomovies/images/logo.png" alt="" />
-        </div>
+      <div class="h-100 rounded-full">
+        <img src="/hugomovies/assets/images/logo.png" alt="" />
       </div>
+      
 
       
     </section>

@@ -6,7 +6,7 @@
   <head><script src="/hugomovies/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hugomovies/livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Title | Home</title>
+    <title>Video Stream | Home</title>
 
     
 
@@ -14,7 +14,7 @@
 
 
 
-<meta name="author" content="Author Name" />
+<meta name="author" content="Will.Meet" />
 <meta name="description" content="Cut out summary from your post content here.
 " />
 
@@ -28,7 +28,7 @@
 
 <meta property="og:url" content="http://localhost:1313/hugomovies/posts/veges-ahead/">
   <meta property="og:site_name" content="Home">
-  <meta property="og:title" content="Article Title">
+  <meta property="og:title" content="Video Stream">
   <meta property="og:description" content="Cut out summary from your post content here.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -42,7 +42,7 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Article Title">
+  <meta name="twitter:title" content="Video Stream">
   <meta name="twitter:description" content="Cut out summary from your post content here.">
 
 
@@ -72,11 +72,13 @@
 
 
     
+    <link rel="stylesheet" href="/hugomovies/css/custom.css" />
+    
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  </head>
 
-  <body x-data="{
+
+    <body x-data="{
     flip: false,
   }">
     
@@ -89,11 +91,10 @@
   <div class="container flex justify-between px-4">
   
     <section class="flex items-center gap-4">
-      <div class="cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
-        <div class="h-100 rounded-full">
-          <img src="/hugomovies/images/logo.png" alt="" />
-        </div>
+      <div class="h-100 rounded-full">
+        <img src="/hugomovies/assets/images/logo.png" alt="" />
       </div>
+      
 
       
     </section>
@@ -236,15 +237,15 @@
     
     <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
       
-  <meta itemprop="name" content="Article Title">
+  <meta itemprop="name" content="Video Stream">
   <meta itemprop="description" content="Cut out summary from your post content here.">
   <meta itemprop="datePublished" content="2024-08-24T13:25:56+05:30">
   <meta itemprop="dateModified" content="2024-08-24T13:25:56+05:30">
-  <meta itemprop="wordCount" content="22">
+  <meta itemprop="wordCount" content="16">
   <meta itemprop="keywords" content="Tag1,Tag2">
 
       <header>
-        <h1 itemprop="headline">Article Title</h1>
+        <h1 itemprop="headline">Video Stream</h1>
         <p class="text-sm">
           
             Saturday, Aug 24, 2024
@@ -262,13 +263,19 @@
         <div class="flex justify-between">
           <div class="flex items-center">
   
-  <span>@</span>
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0" src="assets/images/ninju.png" alt="Will.Meet" />
+    </div>
+  </div>
   
 
   <span itemprop="author" itemscope itemtype="https://schema.org/Person">
   
     
-      <span itemprop="name">Author Name</span>
+      <a itemprop="url" href="https://movies.technologymanias.com" target="_blank">
+        <span itemprop="name">Will.Meet</span>
+      </a>
     
   
   </span>
@@ -285,7 +292,7 @@
   
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://x.com/intent/post?text=Article%20Title&amp;url=http://localhost:1313/hugomovies/posts/veges-ahead/" target="_blank" rel="noopener noreferrer"
+      href="https://x.com/intent/post?text=Video%20Stream&amp;url=http://localhost:1313/hugomovies/posts/veges-ahead/" target="_blank" rel="noopener noreferrer"
       title="Share on X">
       <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
     </a>
@@ -297,7 +304,7 @@
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://wa.me/?text=Article%20Title%20http://localhost:1313/hugomovies/posts/veges-ahead/" target="_blank" rel="noopener noreferrer"
+      href="https://wa.me/?text=Video%20Stream%20http://localhost:1313/hugomovies/posts/veges-ahead/" target="_blank" rel="noopener noreferrer"
       title="Share on WhatsApp">
       <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
     </a>
@@ -313,8 +320,7 @@
       
 
       <p>Cut out summary from your post content here.</p>
-<p><img src="/assets/images/default1.jpg" alt="Main Image" title="Main Image Title">
-The remaining content of your post&hellip;&hellip;</p>
+<p><img src="/assets/images/vijay.jpg" alt="Main Image" title="Main Image Title"></p>
 <script>
      async function fetchData(url) {
         try {

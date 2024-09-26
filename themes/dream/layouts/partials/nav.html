@@ -12,11 +12,12 @@
   <div class="container flex justify-between px-4">
   {{ end }}
     <section class="flex items-center gap-4">
-      <div class="cursor-pointer hover:online" @click="flip = !flip" title="{{ T "flip" }}">
-        <div class="h-100 rounded-full">
-          <img src="{{ site.Params.avatar | relURL }}" alt="{{ site.Params.headerTitle }}" />
-        </div>
+      <div class="h-100 rounded-full">
+        <img src="{{ site.Params.avatar | relURL }}" alt="{{ site.Params.headerTitle }}" />
       </div>
+      <!-- <div class="cursor-pointer hover:online" @click="flip = !flip" title="{{ T "flip" }}">
+        
+      </div> -->
 
       {{ if or site.Params.headerTitle site.Params.motto }}
       <div>
