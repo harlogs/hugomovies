@@ -4,4 +4,4 @@ min = "0.97.0"
 extended = true
 [params]
 darkTheme = "forest"
-avatar = "assets/images/logo.png"
+avatar = "assets/images/logo.webp"

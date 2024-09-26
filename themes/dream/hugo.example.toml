@@ -16,12 +16,12 @@ theme = "hugo-theme-dream"
 lightTheme = "emerald"
 darkTheme = "forest"
 
-# backgroundImage = "me/background.jpg"
+# backgroundImage = "me/background.webp"
 # backgroundImageDark = ""
 
 author = "Dream"
 # description = ""
-# avatar = "img/avatar.png"
+# avatar = "img/avatar.webp"
 headerTitle = "Hugo Theme Dream"
 # motto = ""
 
